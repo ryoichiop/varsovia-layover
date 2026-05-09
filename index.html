@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Layover Varsóvia · 14/05/2026</title>
+<meta name="description" content="Layover de ~9h em Varsóvia entre voos LO524 (PRG→WAW) e LO397 (WAW→HAM). Old Town em sentido único. Ryo + Maria, 14/05/2026.">
+
+<meta property="og:title" content="Layover Varsóvia · 14/05/2026">
+<meta property="og:description" content="~5h30 no centro de Varsóvia entre os voos. Castelo Real, Old Town, pierogi, Coração do Chopin.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1607427293702-036933bbf746?w=1200&q=85&auto=format&fit=crop">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='1' fill='%23fff'/%3E%3Crect y='1' width='3' height='1' fill='%23dc143c'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #faf6ef;
+  --ink: #1f1a16;
+  --muted: #6e6259;
+  --line: rgba(31,26,22,.10);
+  --accent: #c1272d;          /* poland red */
+  --accent-2: #d4af37;        /* warsaw gold */
+  --pastel: #e8d8c4;          /* old town pastel */
+  --pastel-2: #d6c5b0;
+  --green: #2d5e3e;
+  --soft-meal-1: #fdf3e3;
+  --soft-meal-2: #f6ead8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 .5rem; }
+h1 { font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 4.5vw, 2.2rem); }
+h3 { font-size: clamp(1.15rem, 3.5vw, 1.45rem); }
+em { font-style: italic; color: var(--accent-2); font-family: 'Fraunces', serif; }
+a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+a:hover { color: var(--accent); }
+a.plain { border: 0; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 78svh;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 60%, rgba(31,26,22,.05) 0%, rgba(31,26,22,.45) 70%, rgba(31,26,22,.65) 100%),
+    linear-gradient(180deg, rgba(31,26,22,.25) 0%, rgba(31,26,22,.45) 100%),
+    url('https://images.unsplash.com/photo-1607427293702-036933bbf746?w=1920&q=85&auto=format&fit=crop') center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3rem) clamp(2rem, 6vw, 4rem);
+}
+.hero .kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .85;
+  margin-bottom: .8rem;
+}
+.hero h1 { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: 1rem; }
+.hero h1 em { color: #e6c870; text-shadow: 0 0 14px rgba(212,175,55,.4); }
+.hero p.tagline { font-size: clamp(1rem, 2.4vw, 1.15rem); max-width: 680px; opacity: .95; line-height: 1.5; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 1.5rem 2rem; margin-top: 1.4rem; font-size: .9rem; opacity: .9; }
+.hero .meta div strong { display: block; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; opacity: .7; margin-bottom: .15rem; }
+
+/* ── FLIGHTS ── */
+.flights {
+  background: var(--paper);
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1.25rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--line);
+}
+.flights-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 1100px; margin: 0 auto; }
+@media (min-width: 700px) { .flights-grid { grid-template-columns: 1fr 1fr; } }
+.flight {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+}
+.flight .num { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.1rem; }
+.flight .num .who { color: var(--muted); font-size: .85rem; font-weight: 400; font-family: 'Inter', sans-serif; margin-left: .35rem; }
+.flight .route { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: .8rem; margin-top: .75rem; }
+.flight .endpoint { font-family: 'Fraunces', serif; }
+.flight .endpoint .city { font-size: 1.15rem; font-weight: 600; }
+.flight .endpoint .time { color: var(--accent); font-weight: 600; font-size: 1rem; }
+.flight .endpoint .code { font-size: .75rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+.flight .arrow { color: var(--muted); align-self: center; }
+
+/* ── SECTION ── */
+section.block { padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 3rem); border-bottom: 1px solid var(--line); }
+section.block .inner { max-width: 1100px; margin: 0 auto; }
+section.block h2 { margin-bottom: .25rem; }
+section.block .lede { color: var(--muted); margin-bottom: 1.5rem; font-size: 1.02rem; max-width: 720px; }
+
+/* ── CALLOUT ── */
+.callout { padding: 1rem 1.2rem; border-left: 4px solid var(--accent); background: #fff; border-radius: 0 10px 10px 0; margin: 1rem 0; font-size: .95rem; }
+.callout.warn { border-color: var(--accent-2); background: #fffaf0; }
+.callout.tip { border-color: var(--green); background: #f4f8f5; }
+.callout strong { display: inline; }
+
+/* ── TIMELINE ── */
+.day { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.day-head { padding: 1.1rem 1.4rem; background: linear-gradient(135deg, var(--pastel) 0%, var(--pastel-2) 100%); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; gap: .8rem; }
+.day-head .pill { font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .2rem .6rem; border-radius: 4px; color: #fff; background: var(--accent); }
+.day-head h2 { margin: 0; font-size: clamp(1.3rem, 3.5vw, 1.7rem); }
+.day-head .sub { color: var(--muted); font-size: .9rem; margin-left: auto; }
+
+.timeline { padding: 0; }
+.slot { display: grid; grid-template-columns: 60px 1fr 95px; gap: 1rem; padding: .9rem 1.4rem; border-bottom: 1px solid var(--line); align-items: start; }
+.slot:last-child { border-bottom: 0; }
+.slot .time { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--accent); padding-top: 1px; }
+.slot .body { min-width: 0; }
+.slot .body p { margin: 0 0 .35rem; }
+.slot .body p:last-child { margin-bottom: 0; }
+.slot .body p.note { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+.slot .cost { text-align: right; font-family: 'Fraunces', serif; padding-top: 1px; }
+.slot .cost .usd { font-weight: 700; font-size: 1rem; }
+.slot .cost .pln { font-size: .78rem; color: var(--muted); margin-top: 1px; }
+.slot .cost.free .usd { color: var(--green); font-size: .9rem; font-weight: 500; font-family: 'Inter', sans-serif; }
+.slot .cost.paid .usd { color: var(--muted); font-size: .85rem; font-weight: 500; font-family: 'Inter', sans-serif; }
+
+.slot.transport { background: #fbf8f2; }
+.slot.transport .body p { font-size: .92rem; color: var(--muted); }
+.slot.transport .body p strong { color: var(--ink); font-weight: 600; }
+
+.slot.meal-1 { background: var(--soft-meal-1); }
+.slot.meal-2 { background: var(--soft-meal-2); }
+
+.slot.highlight { background: linear-gradient(90deg, rgba(193,39,45,.08) 0%, rgba(193,39,45,.02) 100%); border-left: 4px solid var(--accent); padding-left: 1rem; }
+.slot.highlight .time { color: var(--accent); font-weight: 700; font-size: 1.05rem; }
+
+.tag { display: inline-block; font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .15rem .5rem; border-radius: 3px; vertical-align: middle; margin-left: .35rem; }
+.tag-flight { background: #1f1a16; color: #fff; }
+.tag-walk { background: var(--green); color: #fff; }
+.tag-train { background: #285a99; color: #fff; }
+.tag-tram { background: #d97706; color: #fff; }
+.tag-must { background: var(--accent); color: #fff; }
+
+/* ── COSTS TABLE ── */
+table.costs { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: .9rem; }
+table.costs th, table.costs td { padding: .65rem .9rem; text-align: left; border-bottom: 1px solid var(--line); }
+table.costs th { background: var(--pastel); font-family: 'Fraunces', serif; font-weight: 600; }
+table.costs tr:last-child td { border-bottom: 0; }
+table.costs .num { text-align: right; font-variant-numeric: tabular-nums; }
+table.costs tr.total td { font-weight: 700; background: #fbf8f2; }
+
+/* ── MAP ── */
+.map-wrap { position: relative; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: var(--pastel); }
+.map-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+@media (min-width: 700px) { .map-wrap { padding-bottom: 56.25%; } }
+
+/* ── RESERVAS ── */
+.reservas { display: grid; gap: .7rem; }
+.reservas .item { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .8rem 1.1rem; display: grid; grid-template-columns: 1fr; gap: .3rem; }
+@media (min-width: 700px) { .reservas .item { grid-template-columns: 1fr 1fr auto; align-items: center; } }
+.reservas .item h4 { margin: 0; font-size: 1rem; }
+.reservas .item .when { color: var(--muted); font-size: .9rem; }
+
+/* ── FOOTER ── */
+footer { padding: 2rem 1.5rem; text-align: center; color: var(--muted); font-size: .85rem; }
+footer p { margin: .25rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="kicker">Layover · 14 maio 2026 · quinta</div>
+  <h1>Varsóvia <em>entre voos</em></h1>
+  <p class="tagline">~9h30 entre o pouso do LO524 e a decolagem do LO397. Cinco horas e meia no centro, sentido único pelo Old Town, sem pegar bagagem porque o stopover é Schengen-Schengen e check-in já está feito.</p>
+  <div class="meta">
+    <div><strong>Pessoas</strong>Ryoichi + Maria</div>
+    <div><strong>Bagagem</strong>Apenas carry-on</div>
+    <div><strong>Janela útil</strong>~5h30 no centro</div>
+    <div><strong>Voos</strong>LO524 → LO397</div>
+  </div>
+</section>
+
+<!-- ── FLIGHTS ── -->
+<section class="flights">
+  <div class="flights-grid">
+    <div class="flight">
+      <div class="num">LO 524 <span class="who">· chegada · <a class="plain" href="https://www.lot.com/" target="_blank" rel="noopener">LOT</a></span></div>
+      <div class="route">
+        <div class="endpoint"><div class="city">Praga</div><div class="time">09h55</div><div class="code">PRG</div></div>
+        <div class="arrow">→</div>
+        <div class="endpoint" style="text-align:right"><div class="city">Varsóvia</div><div class="time">11h05</div><div class="code">WAW</div></div>
+      </div>
+    </div>
+    <div class="flight">
+      <div class="num">LO 397 <span class="who">· saída · <a class="plain" href="https://www.lot.com/" target="_blank" rel="noopener">LOT</a></span></div>
+      <div class="route">
+        <div class="endpoint"><div class="city">Varsóvia</div><div class="time">20h35</div><div class="code">WAW</div></div>
+        <div class="arrow">→</div>
+        <div class="endpoint" style="text-align:right"><div class="city">Hamburgo</div><div class="time">22h15</div><div class="code">HAM</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VISÃO GERAL ── -->
+<section class="block">
+  <div class="inner">
+    <h2>Visão geral</h2>
+    <p class="lede">Caminho de sentido único <strong>sul → norte</strong> pelo Royal Route, terminando no Barbacã, e tram de volta. Almoço posicionado antes do Castelo Real (visita longa). Bagagem fica em locker na Centralna, no caminho natural.</p>
+
+    <div class="callout tip"><strong>Por que esse sentido:</strong> Centralna fica ao sul; subir a Krakowskie Przedmieście (Royal Route) com Holy Cross primeiro evita backtrack e respeita a janela de tour da Holy Cross (13–16h, fecha cedo).</div>
+
+    <div class="callout warn"><strong>Atenção bagagem:</strong> os <a href="https://www.lotnisko-chopina.pl" target="_blank" rel="noopener">lockers no aeroporto Chopin estão fechados</a> (oficial: "Luggage lockers at Warsaw Chopin Airport are unavailable"). Solução = lockers da <a href="https://www.google.com/maps/search/?api=1&query=Warszawa+Centralna" target="_blank" rel="noopener">Warszawa Centralna</a>, com pagamento contactless desde 2025, ~25 PLN. No caminho natural — drop ao chegar pelo trem, pickup no retorno.</div>
+  </div>
+</section>
+
+<!-- ── ITINERÁRIO ── -->
+<section class="block" style="background:#fbf8f2">
+  <div class="inner">
+    <h2>14/05 · Quinta · Layover Old Town</h2>
+    <p class="lede">~5h30 efetivas no centro. Cada parada com tempo realista incluindo deslocamento.</p>
+
+    <div class="day">
+      <div class="day-head"><span class="pill">DIA ÚNICO</span><h2>Aeroporto → Old Town → Aeroporto</h2><span class="sub">sentido único S→N · 9 stops</span></div>
+      <div class="timeline">
+
+        <div class="slot"><div class="time">11h05</div><div class="body"><p><strong>Pouso · <a href="https://www.google.com/maps/search/?api=1&query=Warsaw+Chopin+Airport" target="_blank" rel="noopener">Chopin Airport (WAW)</a></strong> <span class="tag tag-flight">voo</span></p><p class="note">Schengen-Schengen, sem imigração. Carry-on direto.</p></div><div class="cost free"><div class="usd">incluído</div></div></div>
+
+        <div class="slot transport"><div class="time">11h35</div><div class="body"><p><strong>→ Trem S3 / Centralna</strong> <span class="tag tag-train">trem</span></p><p>Estação <a href="https://www.google.com/maps/search/?api=1&query=Warszawa+Lotnisko+Chopina+train+station" target="_blank" rel="noopener">WAW Lotnisko Chopina</a> (subterrânea Terminal A, 5 min a pé do desembarque). ~20 min até <a href="https://www.google.com/maps/search/?api=1&query=Warszawa+Centralna" target="_blank" rel="noopener">Warszawa Centralna</a>. Bilhete contactless ~4,40 PLN cada.</p></div><div class="cost"><div class="usd">$2.40</div><div class="pln">~9 PLN/2px</div></div></div>
+
+        <div class="slot"><div class="time">12h10</div><div class="body"><p><strong>Lockers · <a href="https://www.google.com/maps/search/?api=1&query=Warszawa+Centralna" target="_blank" rel="noopener">Warszawa Centralna</a></strong> <span class="tag tag-must">bagagem</span></p><p class="note">Lockers self-service da estação, contactless desde 2025. Localização: behind the commercial premises, no nível principal. Drop carry-ons aqui, pickup no retorno.</p></div><div class="cost"><div class="usd">$6.50</div><div class="pln">~25 PLN</div></div></div>
+
+        <div class="slot transport"><div class="time">12h25</div><div class="body"><p><strong>→ Centro (Royal Route)</strong> <span class="tag tag-tram">tram</span> ou <span class="tag tag-walk">a pé</span></p><p>Tram 4/15/18 de Centralna até Plac Krasińskich (~10 min) ou metro M1 Centrum→Świętokrzyska (1 stop). Alternativa Uber: ~$8 (~30 PLN). Caminhar 25 min via Saxon Garden é viável mas longo.</p></div><div class="cost"><div class="usd">$2.40</div><div class="pln">~9 PLN/2px</div></div></div>
+
+        <div class="slot meal-1"><div class="time">12h45</div><div class="body"><p><strong>🕊 <a href="https://www.google.com/maps/search/?api=1&query=Holy+Cross+Church+Krakowskie+Przedmiescie+Warsaw" target="_blank" rel="noopener">Igreja da Santa Cruz</a></strong></p><p class="note">Coração do Chopin urnado em pilar à esquerda da nave. Janela turística <strong>13h–16h</strong> (fecha cedo, motivo de fazer primeiro). Entrada grátis. ~15 min.</p></div><div class="cost free"><div class="usd">grátis</div></div></div>
+
+        <div class="slot transport"><div class="time">13h00</div><div class="body"><p><strong>→ Sobe Krakowskie Przedmieście</strong> <span class="tag tag-walk">a pé</span></p><p>Royal Route com <a href="https://www.google.com/maps/search/?api=1&query=Copernicus+Monument+Warsaw" target="_blank" rel="noopener">Copernicus Monument</a>, Universidade de Varsóvia, <a href="https://www.google.com/maps/search/?api=1&query=Presidential+Palace+Warsaw" target="_blank" rel="noopener">Presidential Palace</a>, Bristol Hotel. ~15 min, fotos no caminho.</p></div><div class="cost free"><div class="usd">grátis</div></div></div>
+
+        <div class="slot meal-2"><div class="time">13h30</div><div class="body"><p><strong>🥟 Almoço · <a href="https://www.google.com/maps/search/?api=1&query=Zapiecek+Swietojanska+Warsaw" target="_blank" rel="noopener">Zapiecek</a> Świętojańska</strong></p><p class="note">Pierogi tradicionais (boiled e pan-fried), żurek, beer Tyskie. Casual, rápido, ~50–60 min total. Walk-in OK no almoço de quinta. Alternativa: <a href="https://www.google.com/maps/search/?api=1&query=Pierogarnia+Stary+Town+Warsaw" target="_blank" rel="noopener">Pierogarnia Stary Toruń</a> ali perto.</p></div><div class="cost"><div class="usd">$50</div><div class="pln">~190 PLN/2px</div></div></div>
+
+        <div class="slot"><div class="time">14h35</div><div class="body"><p><strong>🏛 <a href="https://www.google.com/maps/search/?api=1&query=Plac+Zamkowy+Warsaw" target="_blank" rel="noopener">Praça do Castelo</a> + <a href="https://www.google.com/maps/search/?api=1&query=Sigismund+Column+Warsaw" target="_blank" rel="noopener">Coluna de Sigismundo</a></strong></p><p class="note">Praça reconstruída pós-guerra, Coluna 1644 (mais antigo monumento secular de Varsóvia). ~15 min, fotos.</p></div><div class="cost free"><div class="usd">grátis</div></div></div>
+
+        <div class="slot highlight"><div class="time">14h50</div><div class="body"><p><strong>👑 <a href="https://www.google.com/maps/search/?api=1&query=Royal+Castle+Warsaw" target="_blank" rel="noopener">Castelo Real</a> (Zamek Królewski)</strong> <span class="tag tag-must">must</span></p><p class="note"><strong>Visita ~2h com áudio (EN/PL/DE/FR/ES).</strong> Salões reais séculos XVII-XVIII, Sala do Trono, Marble Room, obras de Rembrandt e Canaletto. Reconstruído 1971-88 via fundraising público. Tickets <a href="https://www.zamek-krolewski.pl/en/visit" target="_blank" rel="noopener">na bilheteria</a>: 30 PLN + 20 PLN reduced. Quinta 10-18h. <strong>Visita típica = 2 horas, planejei o tempo já considerando isso.</strong></p></div><div class="cost"><div class="usd">$13</div><div class="pln">50 PLN/2px</div></div></div>
+
+        <div class="slot"><div class="time">16h50</div><div class="body"><p><strong>⛪ <a href="https://www.google.com/maps/search/?api=1&query=St+John+Archcathedral+Warsaw" target="_blank" rel="noopener">Catedral São João</a></strong></p><p class="note">Mais antiga igreja de Varsóvia, gótica reconstruída pós-1945. Onde Chopin foi batizado. Entrada grátis. ~10 min, peek na nave.</p></div><div class="cost free"><div class="usd">grátis</div></div></div>
+
+        <div class="slot"><div class="time">17h05</div><div class="body"><p><strong>🏘 <a href="https://www.google.com/maps/search/?api=1&query=Rynek+Starego+Miasta+Warsaw" target="_blank" rel="noopener">Rynek Starego Miasta</a> + <a href="https://www.google.com/maps/search/?api=1&query=Mermaid+Statue+Warsaw" target="_blank" rel="noopener">Mermaid</a></strong></p><p class="note">Praça do Mercado da Cidade Velha, fachadas pastel UNESCO, estátua bronze da Sereia (símbolo de Varsóvia) no centro. ~15 min, foto obrigatória.</p></div><div class="cost free"><div class="usd">grátis</div></div></div>
+
+        <div class="slot"><div class="time">17h20</div><div class="body"><p><strong>🏰 <a href="https://www.google.com/maps/search/?api=1&query=Warsaw+Barbican+Barbakan" target="_blank" rel="noopener">Barbacã</a></strong></p><p class="note">Fortificação semicircular do século XVI, marco norte do Old Town. Exterior livre. ~10 min, fotos.</p></div><div class="cost free"><div class="usd">grátis</div></div></div>
+
+        <div class="slot transport"><div class="time">17h30</div><div class="body"><p><strong>→ Tram de volta a Centralna</strong> <span class="tag tag-tram">tram</span></p><p>Tram 4/15/18 de Plac Krasińskich até Centralna (~10 min). Alternativa Uber: ~$8 (~30 PLN).</p></div><div class="cost"><div class="usd">$2.40</div><div class="pln">~9 PLN/2px</div></div></div>
+
+        <div class="slot"><div class="time">17h45</div><div class="body"><p><strong>Lockers pickup · <a href="https://www.google.com/maps/search/?api=1&query=Warszawa+Centralna" target="_blank" rel="noopener">Centralna</a></strong></p><p class="note">Recolher carry-ons. Trem S3 de volta ao Chopin é mesma linha do trajeto da manhã.</p></div><div class="cost free"><div class="usd">incluído</div></div></div>
+
+        <div class="slot transport"><div class="time">18h00</div><div class="body"><p><strong>→ Trem S3 → Chopin</strong> <span class="tag tag-train">trem</span></p><p>~20 min até <a href="https://www.google.com/maps/search/?api=1&query=Warsaw+Chopin+Airport" target="_blank" rel="noopener">WAW</a>. Bilhete já comprado de manhã (24h pass) OU novo ~4,40 PLN.</p></div><div class="cost"><div class="usd">$2.40</div><div class="pln">~9 PLN/2px</div></div></div>
+
+        <div class="slot"><div class="time">18h25</div><div class="body"><p><strong>Security WAW</strong> <span class="tag tag-flight">aeroporto</span></p><p class="note">Check-in já feito (mesmo bilhete LO524+LO397), só carry-on, security direto. ~2h10 antes do voo, super tranquilo. <a href="https://www.lotnisko-chopina.pl/en/passenger-guide.html" target="_blank" rel="noopener">Passenger guide</a>.</p></div><div class="cost free"><div class="usd">incluído</div></div></div>
+
+        <div class="slot"><div class="time">19h00</div><div class="body"><p><strong>🍷 Jantar/drink airside</strong></p><p class="note">Schengen Departures tem opções (Costa, restaurantes). 2 drinks por pessoa, lanche leve. Lounges Preludium/Fantazja se quiser pagar (~30 €).</p></div><div class="cost"><div class="usd">$45</div><div class="pln">~170 PLN/2px</div></div></div>
+
+        <div class="slot"><div class="time">20h35</div><div class="body"><p><strong>Decolagem · LO 397 → Hamburgo</strong> <span class="tag tag-flight">voo</span></p><p class="note">Chegada HAM 22h15. 1h40 voo.</p></div><div class="cost free"><div class="usd">incluído</div></div></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAPA ── -->
+<section class="block">
+  <div class="inner">
+    <h2>Mapa</h2>
+    <p class="lede">Os 9 stops do dia. Toque em qualquer marcador para ver detalhes e direções.</p>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1hJiVnS3PS172Mo9WPwBQUdKe3PBBK2w&hl=pt" loading="lazy"></iframe>
+    </div>
+    <p style="margin-top:.75rem;font-size:.85rem;color:var(--muted)">Abrir no Google Maps: <a href="https://www.google.com/maps/d/viewer?mid=1hJiVnS3PS172Mo9WPwBQUdKe3PBBK2w" target="_blank" rel="noopener">view full</a></p>
+  </div>
+</section>
+
+<!-- ── RESERVAS ── -->
+<section class="block" style="background:#fbf8f2">
+  <div class="inner">
+    <h2>Reservas</h2>
+    <p class="lede">Nada precisa de reserva antecipada — tudo walk-in. Royal Castle aceita compra de ticket na hora; Zapiecek é casual.</p>
+    <div class="reservas">
+      <div class="item"><h4>Royal Castle</h4><span class="when">Quinta 14/05 · 14h50 · walk-in</span><a href="https://www.zamek-krolewski.pl/en/visit" target="_blank" rel="noopener">site oficial ↗</a></div>
+      <div class="item"><h4>Zapiecek Świętojańska</h4><span class="when">Quinta 14/05 · 13h30 · walk-in</span><a href="https://zapiecek.eu/en/" target="_blank" rel="noopener">menu ↗</a></div>
+      <div class="item"><h4>Lockers Centralna</h4><span class="when">Quinta 14/05 · 12h10 · self-service contactless</span><a href="https://www.intercity.pl/en/site/our-stations/warszawa-centralna.html" target="_blank" rel="noopener">estação ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CUSTOS ── -->
+<section class="block">
+  <div class="inner">
+    <h2>Custos</h2>
+    <p class="lede">Estimativa para 2 pessoas. <a href="https://www.budgetyourtrip.com/poland/warsaw" target="_blank" rel="noopener">BudgetYourTrip Warsaw</a> média mid-range + high-end. USD prominente, PLN secundário.</p>
+    <table class="costs">
+      <thead><tr><th>Item</th><th class="num">USD</th><th class="num">PLN</th></tr></thead>
+      <tbody>
+        <tr><td>Trem S3 ida (WAW→Centralna, 2px)</td><td class="num">$2.40</td><td class="num">9</td></tr>
+        <tr><td>Lockers Centralna (2 carry-ons)</td><td class="num">$6.50</td><td class="num">25</td></tr>
+        <tr><td>Tram centro (2 viagens × 2px)</td><td class="num">$4.80</td><td class="num">18</td></tr>
+        <tr><td>Royal Castle ticket (2 adultos)</td><td class="num">$13</td><td class="num">50</td></tr>
+        <tr><td>Almoço Zapiecek (pierogi + drink/2px)</td><td class="num">$50</td><td class="num">190</td></tr>
+        <tr><td>Trem S3 volta (Centralna→WAW, 2px)</td><td class="num">$2.40</td><td class="num">9</td></tr>
+        <tr><td>Drink/lanche aeroporto (2px)</td><td class="num">$45</td><td class="num">170</td></tr>
+        <tr class="total"><td>Total layover</td><td class="num">$124</td><td class="num">~471</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:.75rem">Câmbio referência: 1 USD ≈ 3,80 PLN (maio 2026). Exclui imprevistos e refeições/lanches no aeroporto se demorarem.</p>
+  </div>
+</section>
+
+<!-- ── TRANSPORTE ── -->
+<section class="block" style="background:#fbf8f2">
+  <div class="inner">
+    <h2>Transporte</h2>
+    <p class="lede">Cada deslocamento com opção pública e Uber.</p>
+
+    <div style="display:grid;gap:.7rem;margin-top:1rem">
+      <div class="callout"><strong>WAW → Centralna</strong> · Trem S3 (subterrâneo Terminal A) ~20 min, 4,40 PLN/px, <a href="https://www.koleje-mazowieckie.com.pl/en" target="_blank" rel="noopener">Koleje Mazowieckie</a>. <em>Uber:</em> ~$15-20 (60-75 PLN), 25-30 min.</div>
+      <div class="callout"><strong>Centralna → Old Town</strong> · Tram 4/15/18 até Plac Krasińskich ~10 min. Metro M1 Centrum→Świętokrzyska (1 stop) + walk 8 min. <em>Uber:</em> ~$8 (30 PLN), 8 min. Bilhete <a href="https://www.wtp.waw.pl/en/" target="_blank" rel="noopener">WTP</a>: 4,40 PLN single, ou 24h pass 15 PLN se for fazer várias viagens.</div>
+      <div class="callout"><strong>Old Town → Centralna</strong> · Mesmo do anterior, sentido inverso.</div>
+      <div class="callout"><strong>Centralna → WAW</strong> · Trem S3 de volta. Mesmo trajeto da manhã.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIMA ── -->
+<section class="block">
+  <div class="inner">
+    <h2>Clima previsto</h2>
+    <p class="lede">Maio em Varsóvia: 10-20°C, possíveis chuvas curtas. Quinta 14/05 média histórica:</p>
+    <table class="costs">
+      <thead><tr><th>Horário</th><th>Condição típica</th><th class="num">Temp</th></tr></thead>
+      <tbody>
+        <tr><td>11h-13h (chegada/início)</td><td>Parcialmente nublado</td><td class="num">15°C</td></tr>
+        <tr><td>13h-16h (almoço/Castelo)</td><td>Sol entre nuvens</td><td class="num">19°C</td></tr>
+        <tr><td>16h-18h (Old Town/volta)</td><td>Possível chuvarada curta</td><td class="num">17°C</td></tr>
+        <tr><td>20h+ (decolagem)</td><td>Limpo</td><td class="num">13°C</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:.75rem"><strong>Levar:</strong> jaqueta leve, guarda-chuva pequeno na mochila. Sapato confortável (~5 km de caminhada total).</p>
+  </div>
+</section>
+
+<footer>
+  <p><em>Layover Varsóvia · 14 maio 2026</em></p>
+  <p>Ryoichi + Maria · entre Praga e Hamburgo</p>
+</footer>
+
+</body>
+</html>
